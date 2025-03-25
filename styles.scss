@@ -1,0 +1,406 @@
+$primary-color: #000000;
+$black-color: #161616;
+$gray-color: hsl(0, 0%, 100%);
+$pink-color: #7e3b9f;
+$violet-color: #100216;
+$font: 'Roboto', sans-serif;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; 
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom,#100216 );
+  
+}
+
+
+/* Barre de navigation (Header) */
+.search-bar {
+  position: sticky;
+  top: 0; //
+  z-index: 999;
+  background: $black-color; 
+  padding: 5px 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+    li a {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 0.9rem; 
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $pink-color;
+      }
+    }
+  }
+
+/*Section Accueil (Hero)*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10%;
+
+  .content {
+    max-width: 50%;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: $pink-color;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: $gray-color;
+    }
+
+    .btn-cv {
+      background: $pink-color;
+      color: $black-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+      &:hover {
+        background: lighten($pink-color, 10%);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid $pink-color;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+/*Section Projets*/
+.projects {
+  padding: 50px 10%;
+  background: linear-gradient(to bottom, $primary-color, $violet-color);
+  color: $primary-color;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $pink-color;
+    margin-bottom: 30px;
+    padding-top: 150px;
+
+  }
+
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+  }
+
+  .project {
+    background-color: $black-color;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: $pink-color;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $gray-color;
+      padding: 0 15px 20px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/*Section Compétences*/
+.skills {
+  padding: 50px 10%;
+  background: linear-gradient(to bottom, $primary-color, $violet-color);
+  background: linear-gradient(to top, $primary-color, $violet-color);
+  color: $primary-color;
+  text-align: center;
+  padding-top: 150px;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $pink-color;
+    margin-bottom: 40px;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $black-color;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: $pink-color;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/*Section Contact*/
+.contact {
+  padding: 50px 10%;
+  padding-top: 150px;
+  background: linear-gradient(to bottom, $primary-color, $violet-color);
+  background: linear-gradient(to top, $primary-color, $violet-color);
+  color: $primary-color;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $pink-color;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: $gray-color;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-group {
+      margin-bottom: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $pink-color;
+        border-radius: 5px;
+        background-color: $black-color;
+        color: white;
+        font-size: 1rem;
+        transition: border-color 0.3s ease-in-out;
+
+        &:focus {
+          border-color: lighten($pink-color, 10%);
+        }
+      }
+
+      textarea {
+        height: 100px;
+      }
+    }
+
+    .btn-send {
+      background: $pink-color;
+      color: $black-color;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: lighten($pink-color, 10%);
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+
+
+/*Animation d'apparition*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.btn-cv a{
+  color: $black-color;
+  font-size: 20px;
+   transform: scale(1.01);
+   position: relative;
+   width: 32vw;
+   border-radius: 5%;
+   box-shadow: 0 0 15px $black-color;
+   cursor: pointer;
+}
+.btn-cv a:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 15px $pink-color;
+}
+
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: black;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px; 
+}
+
+.navbar a {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: black;
+  background-color: #934bb7;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+/*Section Education*/
+.education {
+  padding: 50px 10%;
+  background: linear-gradient(to bottom, $violet-color, $primary-color);
+  background: linear-gradient(to top, $violet-color, $primary-color);
+  color: $primary-color;
+  text-align: center;
+
+
+
+
+  .education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .education {
+    background-color: $black-color;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+/*animation*/
+section {
+  padding: 50px 10%;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+section.visible {
+  opacity: 1;
+  transform: scale(1.02); 
+}
+
+
+
+
+
+.project img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+button {
+  transition: transform 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
+}
