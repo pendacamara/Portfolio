@@ -18,6 +18,8 @@
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#education">Expériences</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#socials">socials</a></li>
+            
         </ul>
     </nav>
 </header>
@@ -35,6 +37,7 @@
         <img src="images/profile-image.jpg" alt="Penda">
     </div>
 </section>
+
 
     <section id="projects" class="projects">
     <h2>Mes Projets</h2>
@@ -132,6 +135,28 @@
     </form>
 </section>
 
+
+
+
+
+<footer>
+<section id="socials" class="socials">
+  <h2>Suivez-moi</h2>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/penda.cmr/" target="_blank">
+      <img src="images/instagram (6).png" alt="Instagram">
+    </a>
+    <a href="https://twitter.com/PendisCamara" target="_blank">
+      <img src="images/twitter (1).png" alt="Twitter">
+    </a>
+    <a href="https://www.linkedin.com/in/penda-camara-3004a4282/" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/EpitechWebAcademiePromo2025" target="_blank">
+      <img src="images/github.png" alt="GitHub">
+    </a>
+  </div>
+  </footer>
 
 </body>
 </html>
