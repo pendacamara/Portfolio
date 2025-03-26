@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Penda</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="animation.js"></script>
+    <script src="dist/animation.js" defer></script>
 
 </head>
 <body>
+
 <header class="header">
-    
+    <button id="menu-toggle">☰</button>
     <nav class="navbar">
         <ul>
             <li><a href="#hero">Accueil</a></li>
@@ -18,25 +19,27 @@
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#education">Expériences</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#socials">socials</a></li>
-            
+            <li><a href="#socials">Socials</a></li>
         </ul>
     </nav>
 </header>
 
 
+
 <section id="hero" class="hero">
     <div class="content">
         <h1>Bienvenue, je suis Penda</h1>
-        <p>Étudiante à EPITECH en quête de nouvelles opportunités. 
-            Passionnée par le développement Web front-end avec 
-            deux ans d'expérience.</p>
-        <button class="btn-cv"><a href="images/moncv.pdf" download="CV">Télécharger mon CV</a></button>
+        <h2 class="catchphrase">Codez vos rêves et façonnez l'avenir avec créativité et précision. 😊</h2>
+        <h3>À propos de moi</h3>
+        <h3>Étudiante à EPITECH en quête de nouvelles opportunités. Passionnée par le développement Web front-end avec deux ans d'expérience.</h3>
+        <a class="btn-cv" href="images/moncv.pdf" download="CV">Télécharger mon CV</a>
     </div>
     <div class="profile-image">
         <img src="images/profile-image.jpg" alt="Penda">
     </div>
 </section>
+
+
 
 
     <section id="projects" class="projects">
@@ -87,8 +90,13 @@
             <img src="images/sass.png" alt="SASS Logo">
             <h3>SASS</h3>
         </div>
+        <div class="skill">
+            <img src="images/sql.png" alt="SQL Logo">
+            <h3>SQL</h3>
+        </div>
     </div>
 </section>
+
 
 
 <section id="education" class="projects">
@@ -123,7 +131,7 @@
             <input type="text" name="Prenom" placeholder="Votre prénom" required>
         </div>
         <div class="form-group">
-            <input type="number" name="phone" placeholder="Votre uméro de téléphone" required>
+            <input type="number" name="phone" placeholder="Votre numéro de téléphone" required>
         </div>
         <div class="form-group">
             <input type="email" name="email" placeholder="Votre email" required>
@@ -134,8 +142,6 @@
         <button type="submit" class="btn-send">Envoyer</button>
     </form>
 </section>
-
-
 
 
 

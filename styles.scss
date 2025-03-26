@@ -15,6 +15,37 @@ body {
 }
 
 
+
+.hero {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center; /* Texte centré */
+}
+
+.profile-image {
+  max-width: 100%; 
+  height: auto; 
+  order: -1; 
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+      flex-direction: row; 
+      text-align: left; 
+  }
+
+  .profile-image {
+      order: 0; 
+      margin: 0 0 0 20px; 
+  }
+}
+
+
+
+
+
 /* Barre de navigation (Header) */
 .search-bar {
   position: sticky;
@@ -37,58 +68,90 @@ body {
     }
   }
 
-/*Section Accueil (Hero)*/
+
+/* Section Accueil (Hero) */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px 10%;
+}
 
-  .content {
-    max-width: 50%;
+.hero .content {
+  max-width: 50%;
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: $pink-color;
-    }
+.hero .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: $pink-color;
+}
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      color: $gray-color;
-    }
+.hero .content h3 {
+  color: hsl(0, 0%, 100%);
+}
 
-    .btn-cv {
-      background: $pink-color;
-      color: $black-color;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+.hero .content .catchphrase {
+  font-size: 1.5rem;
+  color: #b096be; 
+  font-style: italic; 
+  text-align: center;
+  margin: 10px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease-out forwards;
+  transition: transform 0.1s ease-out;
+}
 
-      &:hover {
-        background: lighten($pink-color, 10%);
-        transform: translateY(-3px);
-      }
-    }
-  }
-
-  .profile-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 3px solid $pink-color;
-    object-fit: cover;
-    transition: transform 0.2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.02);
-    }
+/* Animation pour l'apparition du texte */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: $gray-color;
+}
+
+.hero .content .btn-cv {
+  display: inline-block;
+  background-color: #934bb7;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* En mode petits écrans */
+@media (max-width: 768px) {
+  .hero .content .btn-cv {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+  }
+}
+
+.hero .profile-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid $pink-color;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hero .profile-image img:hover {
+  transform: scale(1.02);
+}
+
+
+
 
 /*Section Projets*/
 .projects {
@@ -261,8 +324,7 @@ body {
 }
 
 
-
-/*Animation d'apparition*/
+/*animation d'apparition*/
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -291,8 +353,6 @@ body {
 }
 
 
-
-
 .header {
   position: fixed;
   top: 0;
@@ -303,18 +363,28 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
+.hero {
+  margin-top: 60px;
+}
+
+
+.header {
+  padding: 10px 20px; 
+  height: auto; 
+  margin-bottom: 20px; 
+}
+
 .navbar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
+  margin: 0; 
   padding: 0;
-  margin: 0;
+  list-style: none; 
 }
 
 .navbar li {
-  margin: 0 15px; 
+  display: inline-block; 
+  margin: 0 10px; 
 }
+
 
 .navbar a {
   font-size: 18px;
@@ -332,11 +402,23 @@ body {
 }
 
 
+@media (max-width: 768px) {
+  .header {
+      padding: 5px 10px; /* réduit encore plus l'espace sur mobile */
+  }
+
+  .navbar ul {
+      flex-direction: column;
+      text-align: center;
+  }
+}
 
 
 
 
-/*Section Education*/
+
+
+/*section Education*/
 .education {
   padding: 50px 10%;
   background: linear-gradient(to bottom, $violet-color, $primary-color);
@@ -368,7 +450,6 @@ body {
 }
 
 
-
 /*animation*/
 section {
   padding: 50px 10%;
@@ -384,10 +465,6 @@ section.visible {
   opacity: 1;
   transform: scale(1.02); 
 }
-
-
-
-
 
 .project img {
   transition: transform 0.3s ease-in-out;
@@ -409,8 +486,8 @@ button:active {
 .socials {
   text-align: center;
     background: linear-gradient(to top, #15031d, #2f0233);
-  padding: 10px 20px; /* Réduisez le padding */
-  margin: 0; /* Supprimez les marges inutiles */
+  padding: 10px 20px;
+  margin: 0;
   font-size: 0.9rem;
 }
 
@@ -436,3 +513,47 @@ button:active {
   transform: scale(1.2);
 }
 
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* masque le menu bare si ma page et en grand */
+#menu-toggle {
+  display: none;
+  background-color: #934bb7;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* responsive du menu bare */
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none; /* masque les liens */
+      flex-direction: column;
+      background-color: #000000;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+  }
+
+  .navbar ul.active {
+      display: flex; /* affiche les liens quand le menu bare est cliqué */
+  }
+
+  #menu-toggle {
+      display: block; /* affiche le bouton menu bare */
+  }
+}
