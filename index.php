@@ -48,14 +48,15 @@
         <article class="project">
             <img src="images/tweeter.png" alt="Projet 1">
             <h3>TWEETER</h3>
-            <p>Reproduction du réseau social<br>Utilisation de PHP<br>Base de données relationnelle
+            <p>Reproduction du réseau social<br>Utilisation de PHP<br>
+            Base de données relationnelle
             </p>
         </article>
         <article class="project">
             <img src="images/puissance4.png" alt="Projet 2">
-            <h3>PUISSANCE 4</h3>
-            <p>Création d’une Interface de je
-            jeu<br>Réalisation d’un système de jeu tour par tour en JS</p>
+            <h3><a href="https://pendacamara.github.io/PUISSANCE-4/">PUISSANCE 4 </a><h3>
+            <p>Création d’une Interface de je jeu<br>
+            Réalisation d’un système de jeu tour par tour en JS</p>
         </article>
         <article class="project">
             <img src="images/meetic.png" alt="Projet 3">
@@ -149,16 +150,14 @@
 <section id="socials" class="socials">
   <h2>Suivez-moi</h2>
   <div class="social-icons">
-    <a href="https://www.instagram.com/penda.cmr/" target="_blank">
-      <img src="images/instagram (6).png" alt="Instagram">
-    </a>
+    
     <a href="https://twitter.com/PendisCamara" target="_blank">
       <img src="images/twitter (1).png" alt="Twitter">
     </a>
     <a href="https://www.linkedin.com/in/penda-camara-3004a4282/" target="_blank">
       <img src="images/linkedin.png" alt="LinkedIn">
     </a>
-    <a href="https://github.com/EpitechWebAcademiePromo2025" target="_blank">
+    <a href="https://github.com/pendacamara?tab=repositories" target="_blank">
       <img src="images/github.png" alt="GitHub">
     </a>
   </div>
