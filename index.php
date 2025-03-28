@@ -32,7 +32,7 @@
         <h2 class="catchphrase">Codez vos rêves et façonnez l'avenir avec créativité et précision. 😊</h2>
         <h3>À propos de moi</h3>
         <h3>Étudiante à EPITECH en quête de nouvelles opportunités. Passionnée par le développement Web front-end avec deux ans d'expérience.</h3>
-        <a class="btn-cv" href="images/moncv.pdf" download="CV">Télécharger mon CV</a>
+        <a class="btn-cv" href="images/moncv.pdf"target="_blank">Mon CV</a>
     </div>
     <div class="profile-image">
         <img src="images/profile-image.jpg" alt="Penda">
@@ -100,7 +100,7 @@
 
 
 <section id="education" class="projects">
-    <h2>Mes éxperience professionelle </h2>
+    <h2>Mes experiences professionelles </h2>
     <div class="project-list">
         <article class="project">
             <img src="images/logo_action.png" alt="Projet 1">
@@ -114,8 +114,8 @@
         </article>
         <article class="project">
             <img src="images/assistante.jpg" alt="Projet 3">
-            <h3>Assistante dentaire </h3>
-            <p>Cabinet Henry Mondor </p>
+            <h3>Assistante dentaire</h3>
+            <p>Cabinet Henry Mondor</p>
         </article>
     </div>
 </section>
